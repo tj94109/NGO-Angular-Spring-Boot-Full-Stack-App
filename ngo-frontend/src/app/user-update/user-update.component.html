@@ -1,0 +1,41 @@
+<h1> Update User Page </h1>
+
+
+<form (ngSubmit) = "onSubmit()">
+
+<div>
+    <label>First Name</label>
+    <input type="text" id="firstName" 
+    [(ngModel)] = "user.firstName" name="firstName">
+</div>
+
+<div>
+    <label>Last Name</label>
+    <input type="text" id="lastName" 
+    [(ngModel)] = "user.lastName" name="lastName">
+</div>
+
+<div>
+    <label>Email Address:</label>
+    <input type="text" id="email" 
+    [(ngModel)] = "user.email" name="email">
+</div>
+<div>
+    <label>Role:</label>
+    <div class="form-control">
+        <label class="radio-inline">
+         <input type="radio" value="ROLE_ADMIN" name="role" [(ngModel)]="user.role">
+            Admin
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="ROLE_USER" name="role" [(ngModel)]="user.role">
+            User
+        </label>
+    </div>
+</div>
+
+<p></p>
+
+
+<button class="btn btn-success" type = "submit"> Submit </button>
+</form> 

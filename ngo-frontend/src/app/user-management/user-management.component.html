@@ -1,0 +1,36 @@
+
+
+<table>
+    <thead>
+        <td><h2> User Management </h2></td>
+    </thead>
+</table>
+
+<div class="text-right">
+    <h3><button (click)="onClickAddUser()" title="">Add User</button> </h3>
+</div>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="onClickEditUser(user.id)">Edit</button></td>
+            <td><button type="button" class="btn btn-primary" (click)="onClickDeleteUser(user.id)">Delete</button></td>
+
+        </tr>
+
+    </tbody>
+</table>

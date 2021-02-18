@@ -1,0 +1,31 @@
+<h1> Donation Details Page </h1>
+
+
+<form (ngSubmit) = "onSubmit()">
+
+<div>
+    <label>Charity/ Donation Type</label>
+    <input type="text" [ngModel]="charity" id="type" 
+    name="charity">
+</div>
+
+<div>
+    <label>Full Name</label>
+    <input type="text" id="name" 
+    [(ngModel)] = "donation.name" name="name">
+</div>
+
+<div>
+    <label>Date</label>
+    <input type="date" id="date" 
+    [(ngModel)] = "donation.date" name="date">
+</div>
+
+<div>
+    <label>Amount</label>
+    <input type="text" id="amount" 
+    [(ngModel)] = "donation.amount" name="amount">
+</div>
+
+<button class="btn btn-success" type = "submit"> Continue </button>
+</form> 

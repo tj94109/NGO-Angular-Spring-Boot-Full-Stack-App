@@ -1,0 +1,14 @@
+<h1> Make a Donation </h1>
+ 
+<h2 class ="text-center">Click on any donation type to continue</h2>
+
+<div class=horizontal>
+    <h3 *ngFor = 'let charity of charities'>     
+        <button #button (click)="onClick(button.title)" title={{charity.name}}>{{charity.name}}</button> 
+    </h3>
+</div>
+
+
+
+
+
