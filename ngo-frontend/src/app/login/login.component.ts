@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RestApiService } from '../restapi.service';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +9,23 @@ import { RestApiService } from '../restapi.service';
 })
 export class LoginComponent implements OnInit {
 
-  username:string;
-  password:string;
-  message:any;
+  username = ''
+  password = ''
+  invalidLogin = false
 
-  constructor(private service: RestApiService) { }
+  constructor(private router: Router,
+    private loginservice: AuthenticationService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  doLogin(){
-    let resp =this.service.login(this.username,this.password)
-    resp.subscribe(data=>{
-      console.log(data);
-    })
+  checkLogin() {
+    if (this.loginservice.authenticate(this.username, this.password)
+    ) {
+      this.router.navigate([''])
+      this.invalidLogin = false
+    } else
+      this.invalidLogin = true
   }
 
 }

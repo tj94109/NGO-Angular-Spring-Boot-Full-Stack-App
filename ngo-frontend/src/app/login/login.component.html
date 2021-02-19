@@ -1,18 +1,13 @@
-<div class="background-wrap">
-    <div class="background"></div>
+<div class="container">
+  <div>
+  User Name : <input type="text" name="username" [(ngModel)]="username"> (admin@gmail.com)
   </div>
- 
-  <form id="accesspanel" action="">
-    <h1 id="litheader">NGO Donation Login</h1>
-    <div class="inset">
-      <p>
-        <input type="text" name="username" [(ngModel)]="username" id="email" placeholder="username">
-      </p>
-      <p>
-        <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
-      </p>
-    </div>
-    <p class="p-container">
-      <input type="submit" name="Login" id="go" value="Login" (click)="doLogin()">
-    </p>
-  </form>
+  <p></p>
+ <div>
+   Password : <input type="password" name="password" [(ngModel)]="password">
+ </div>
+
+  <button (click)=checkLogin() class="btn btn-success">
+    Login
+  </button>
+</div>

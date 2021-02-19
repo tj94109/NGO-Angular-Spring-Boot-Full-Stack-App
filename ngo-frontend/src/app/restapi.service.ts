@@ -10,9 +10,9 @@ import { User } from './user';
 })
 export class RestApiService {
 
-  private donationUrl = "http://localhost:8080/api/donations"
-  private userUrl = "http://localhost:8080/api/users"
-
+  private donationUrl = "http://ngoproject.ml/ngo-backend/api/donations"
+  private userUrl = "http://ngoproject.ml/ngo-backend/api/users"
+ 
   constructor(private httpClient:HttpClient) { }
 
   public login(username: string, password:string){

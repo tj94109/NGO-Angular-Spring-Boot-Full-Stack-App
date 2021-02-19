@@ -32,14 +32,14 @@ public class NgoBackendApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
     //String firstName, String email, String password, String role)
-        this.userRepo.save(new User("Bob", "Smith", "user@gmail.com", "user", "ROLE_USER", true));
-        this.userRepo.save(new User("Albert", "Admin", "admin@gmail.com", "admin", "ROLE_ADMIN", true
+        this.userRepo.save(new User("Michelle", "Smith", "user@gmail.com", "user", "ROLE_USER", true));
+        this.userRepo.save(new User("Bobby", "Biggs", "admin@gmail.com", "admin", "ROLE_ADMIN", true
         ));
 
         //String type, String name, Date date, double amount)
-        this.donationRepo.save(new Donation("charity", "Bob Smith", date, 50));
-        this.donationRepo.save(new Donation("fundraiser", "Albert Admin", date, 150));
-        this.donationRepo.save(new Donation("charity", "Mike Jones", date, 50));
-        this.donationRepo.save(new Donation("Bake Sale", "Bobby Bill", date, 250));
+        this.donationRepo.save(new Donation("Bake Sale", "Bob Smith", date, 50));
+        this.donationRepo.save(new Donation("Fundraiser", "Albert Admin", date, 150));
+        this.donationRepo.save(new Donation("Dog Rescue", "Mike Jones", date, 50));
+        this.donationRepo.save(new Donation("Marathon", "Bobby Bill", date, 250));
     }
 }

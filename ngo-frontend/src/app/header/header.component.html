@@ -1,0 +1,12 @@
+<header>
+    <nav class ="navbar navbar-dark" style="background-color: #788086;">
+        <div><H1>NGO Donation Project</H1></div>
+    <ul class="navbar-nav">
+      <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><h2>Login</h2></a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"><h2>Logout</h2></a></li>
+    
+    
+    </ul>
+    
+    </nav>
+

@@ -14,6 +14,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
+import { LogoutComponent } from './logout/logout.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { UserUpdateComponent } from './user-update/user-update.component';
     OrderDetailComponent,
     UserManagementComponent,
     UserCreateComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    LogoutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
