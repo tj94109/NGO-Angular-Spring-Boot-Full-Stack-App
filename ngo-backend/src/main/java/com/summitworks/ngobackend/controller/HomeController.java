@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://ngoproject.ml")
 @RestController
 @RequestMapping("/")
 public class HomeController {
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping("/")
     public String login() {
 

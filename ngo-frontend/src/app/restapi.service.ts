@@ -13,6 +13,10 @@ export class RestApiService {
   private donationUrl = "http://ngoproject.ml/ngo-backend/api/donations"
   private userUrl = "http://ngoproject.ml/ngo-backend/api/users"
  
+  // private donationUrl = "http://localhost:80/ngo-backend/api/donations"
+  // private userUrl = "http://localhost:80/ngo-backend/api/users"
+
+
   constructor(private httpClient:HttpClient) { }
 
   public login(username: string, password:string){
