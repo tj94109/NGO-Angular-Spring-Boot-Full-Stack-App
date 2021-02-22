@@ -16,6 +16,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HeaderComponent } from './header/header.component';
+import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { HeaderComponent } from './header/header.component';
     UserCreateComponent,
     UserUpdateComponent,
     LogoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

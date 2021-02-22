@@ -16,16 +16,15 @@
 </div>
 
 <div>
-    <label>Date</label>
-    <input type="date" id="date" 
-    [(ngModel)] = "donation.date" name="date">
+    <label>Date:</label>
+    <h3>{{date | date: 'MM/dd/yyyy'}}</h3>
 </div>
 
 <div>
     <label>Amount</label>
-    <input type="text" id="amount" 
+    <input type="number" id="amount" 
     [(ngModel)] = "donation.amount" name="amount">
 </div>
 
-<button class="btn btn-success" type = "submit"> Continue </button>
+<button class="btn btn-success" type = "submit"> Add To Cart </button>
 </form> 
